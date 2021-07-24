@@ -1,5 +1,17 @@
 # Fast MLflow setup
 
+## Running the setup.
+
+`docker-compose up` will get you up and running.
+
+In case you don't want to run on Docker, you can run it right away with:
+
+* `poetry install` 
+* `poetry run mlflow server --port XXXX`
+* `poetry run mlflow ui`
+
+This install `MLflow` locally and run the tracking server using your local filesystem as storage/db on an `/mlruns` dir.
+
 ## Configuration
 
 To setup an S3 Bucket for storing MLFlow's artifacts (only way to write artifacts with this setup), change MLFLOW_ARTIFACT_ROOT variable in .env file
@@ -7,8 +19,6 @@ To setup an S3 Bucket for storing MLFlow's artifacts (only way to write artifact
 ```
 MLFLOW_ARTIFACT_ROOT=s3://<bucket>/<path>
 ```
-
-Then `docker-compose up` will get you up and running.
 
 For default settings check `.env`.
 
