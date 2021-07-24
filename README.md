@@ -10,7 +10,6 @@ MLFLOW_ARTIFACT_ROOT=s3://<bucket>/<path>
 
 Then `docker-compose up` will get you up and running.
 
-
 For default settings check `.env`.
 
 AWS credentials can be passed by mounting `~/.aws`.
